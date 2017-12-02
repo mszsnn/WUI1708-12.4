@@ -26,7 +26,7 @@ $(function(){
                 let num=obj.num||"10";
                 let act=obj.act||$("li.active");
                 $.ajax({
-                    url: "http://api.jisuapi.com/news/get?channel="+act.text()+"&start="+start+"&num="+num+"&appkey=d844b0839ff12da9",
+                    url: "https://api.jisuapi.com/news/get?channel="+act.text()+"&start="+start+"&num="+num+"&appkey=d844b0839ff12da9",
                     dataType: "jsonp",
                     success: function(val){
                         let arr=val.result.list;
@@ -95,7 +95,7 @@ $(function(){
             function LookFor(obj){
                 let val=obj.val;
                 $.ajax({
-                    url:"http://api.jisuapi.com/news/search?keyword="+val+"&appkey=d844b0839ff12da9",
+                    url:"https://api.jisuapi.com/news/search?keyword="+val+"&appkey=d844b0839ff12da9",
                     dataType: "jsonp",
                     success: function(val){
                         let arr=val.result.list;
